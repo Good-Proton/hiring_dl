@@ -6,7 +6,7 @@ import TargetCollection from '../src/TargetCollection';
 
 import t from 'tap';
 
-const mutiplier = 20;
+const mutiplier = 40;
 const packetSize = 1000;
 t.test(`${mutiplier * packetSize} people and ${packetSize} mutations`, async t => {
     const source = new Source(new DB(':memory:'));
