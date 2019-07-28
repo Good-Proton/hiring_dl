@@ -1,0 +1,50 @@
+{
+  "name": "@linked-helper/hiring_dl",
+  "version": "1.0.0",
+  "description": "Linked Helper hiring test (data-layer)",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "tslint -p . && tslint -p test",
+    "test": "tap -t600 test/*.spec.ts test/*.int.ts",
+    "perf": "cross-env TS_NODE_TRANSPILE_ONLY=true tap --no-coverage --reporter=spec -t600 test/*.bench.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Good-Proton/hiring_dl.git"
+  },
+  "keywords": [
+    "linkedhelper"
+  ],
+  "author": {
+    "name": "Vyacheslav Dorzhiev",
+    "email": "contact@vyacheslavdorzhiev.pro",
+    "web": "https://github.com/Good-Proton/hiring_dl.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Good-Proton/hiring_dl.git/issues"
+  },
+  "homepage": "https://github.com/Good-Proton/hiring_dl.git#readme",
+  "devDependencies": {
+    "@types/node": "^12.0.7",
+    "@types/sinon": "^7.0.12",
+    "@types/sqlite3": "^3.1.5",
+    "cross-env": "^5.2.0",
+    "sinon": "^7.3.2",
+    "tap": "^14.2.2",
+    "ts-node": "^8.2.0",
+    "tsame": "^2.0.1",
+    "tslint": "^5.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.5.1",
+    "typescript-tslint-plugin": "^0.4.0"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.9"
+  }
+}

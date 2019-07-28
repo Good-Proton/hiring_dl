@@ -1,0 +1,85 @@
+[
+    {
+        "type": "none",
+        "target": [],
+        "queued": [],
+        "completed": []
+    },
+    {
+        "type": "add-to-target",
+        "people": [0, 1, 2, 3],
+        "target": [0, 1, 2, 3],
+        "queued": [0, 1, 2, 3],
+        "completed": []
+    },
+    {
+        "type": "save-result",
+        "person": 0,
+        "target": [0, 1, 2, 3],
+        "queued": [1, 2, 3],
+        "completed": [0]
+    },
+    {
+        "type": "remove-from-target",
+        "people": [3],
+        "target": [0, 1, 2],
+        "queued": [1, 2],
+        "completed": [0]
+    },
+    {
+        "type": "save-result",
+        "person": 2,
+        "target": [0, 1, 2],
+        "queued": [1],
+        "completed": [0, 2]
+    },
+    {
+        "type": "save-result",
+        "person": 1,
+        "target": [0, 1, 2],
+        "queued": [],
+        "completed": [0, 2, 1]
+    },
+    {
+        "type": "add-to-queue",
+        "people": [2, 1],
+        "target": [0, 2, 1],
+        "queued": [2, 1],
+        "completed": [0]
+    },
+    {
+        "type": "remove-from-queue",
+        "people": [0, 3, 4, 5, 6, 7, 8, 9, 10],
+        "target": [0, 2, 1],
+        "queued": [2, 1],
+        "completed": [0]
+    },
+    {
+        "type": "remove-from-queue",
+        "people": [1],
+        "target": [0, 2],
+        "queued": [2],
+        "completed": [0]
+    },
+    {
+        "type": "save-result",
+        "person": 2,
+        "target": [0, 2],
+        "queued": [],
+        "completed": [0, 2]
+    },
+    {
+        "type": "remove-from-target",
+        "people": [0, 1, 2, 3],
+        "target": [],
+        "queued": [],
+        "completed": []
+    },
+    {
+        "type": "add-to-target",
+        "people": [0, 1, 2, 3],
+        "target": [0, 1, 2, 3],
+        "queued": [0, 1, 2, 3],
+        "completed": []
+    }
+]
