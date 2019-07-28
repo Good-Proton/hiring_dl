@@ -1,6 +1,6 @@
 {
   "name": "@linked-helper/hiring_dl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Linked Helper hiring test (data-layer)",
   "main": "dist/index.js",
   "module": "dist/index.js",
