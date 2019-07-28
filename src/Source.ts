@@ -9,7 +9,7 @@ export default class Source {
 
     @queued @transaction
     public async addToTarget(people: Iterable<PersonId>) {
-        ...
+        ...?
     }
 
     @queued @transaction
