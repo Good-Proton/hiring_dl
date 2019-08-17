@@ -9,7 +9,7 @@ import t from 'tap';
 const source = new Source(new DB(':memory:'));
 
 t.afterEach(async () => {
-    await source.removeFromTarget(await source.getPeople('target'));
+    await source.clearTarget();
 });
 
 t.test('`.size`, `.length`', async t => {

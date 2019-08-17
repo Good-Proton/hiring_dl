@@ -27,7 +27,36 @@ export default class Source {
        ...
     }
 
+    @queued @transaction
+    public async clearTarget() {
+        ...
+    }
+
     ...
+
+    @queued @transaction
+    public async getSize() {
+        const size: {
+            size: number
+            page_count: number
+            page_size: number
+        } = await this.db.get(`
+            SELECT page_count * page_size as size, page_count, page_size 
+            FROM pragma_page_count(), pragma_page_size()
+        `);
+
+        const tables: Array<{ name: string }> =
+            await this.db.all(`SELECT name FROM sqlite_master WHERE type = 'table'`);
+        let rowCount = 0;
+        for (const table of tables) {
+            rowCount += (await this.db.get(`SELECT COUNT(*) as count FROM ${table.name}`)).count;
+        }
+
+        return {
+            ...size,
+            row_count: rowCount
+        };
+    }
 
     private async initialize() {
         await this.db.exec(`
